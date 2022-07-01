@@ -66,9 +66,3 @@ public:
 private:
     std::unordered_map<Key, Value> _data;
 };
-
-int main() {
-
-
-    return 0;
-}
