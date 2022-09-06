@@ -1,3 +1,4 @@
+#include <iostream>
 struct ListNode {
 	int val;
 	ListNode *next;
@@ -35,3 +36,30 @@ public:
 		return new_head;
 	}
 };
+
+bool isPalindrome(int x) {
+	if (x < 0)
+	{
+		return false;
+	}
+	if (x < 10)
+	{
+		return true;
+	}
+	int temp = 1;
+	while (temp < x)
+	{
+		temp *= 10;
+	}
+	int res = 0;
+	while (temp > 0)
+	{
+		res += temp * (x / temp);
+		temp /= 10;
+	}
+	if (res == x)
+	{
+		return true;
+	}
+	return false;
+}
