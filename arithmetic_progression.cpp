@@ -3,10 +3,10 @@
 
 struct ProgressionResult
 {
-	int start, end, step = 0, number; //где number это добавленное число
+	int start, end, step = 0, number; //РіРґРµ number СЌС‚Рѕ РґРѕР±Р°РІР»РµРЅРЅРѕРµ С‡РёСЃР»Рѕ
 };
 
-ProgressionResult ProgressioтAnalysis(std::vector<int> list)
+ProgressionResult ProgressioС‚Analysis(std::vector<int> list)
 {
 	ProgressionResult result;
 	result.start = list[0];
@@ -31,13 +31,13 @@ ProgressionResult ProgressioтAnalysis(std::vector<int> list)
 	}
 	if (list.size() != 2)
 	{
-		result.step = (result.end - result.start) / (list.size() - 2); // -1 т.к. К списку добавили одно число, уже имеющееся в нем
+		result.step = (result.end - result.start) / (list.size() - 2); // -1 С‚.Рє. Рљ СЃРїРёСЃРєСѓ РґРѕР±Р°РІРёР»Рё РѕРґРЅРѕ С‡РёСЃР»Рѕ, СѓР¶Рµ РёРјРµСЋС‰РµРµСЃСЏ РІ РЅРµРј
 	}
 	return result;
 }
 
 int main()
 {
-	ProgressionResult result = ProgressioтAnalysis({ 1,1 });
+	ProgressionResult result = ProgressioС‚Analysis({ 1,1 });
 	return 0;
 }
